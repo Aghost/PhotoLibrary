@@ -1,0 +1,10 @@
+<div class="main">
+    <div *ngFor="let photo of photos">
+        <div class="center">
+            <a class="title"(click)="onClick(photo.id)">{{photo.title}}</a>
+            <img src="{{photo.thumbnailUrl}}" (click)="showImg(photo.id)">
+        </div>
+    </div>
+    <app-photo-detail *ngIf="this.isVisible" class="display"></app-photo-detail>
+</div>
+
